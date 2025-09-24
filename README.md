@@ -1,5 +1,3 @@
-# prometheus-grafana
-
 ## Prometheus (Targets)
 <img width="800" height="600" alt="Prometheus Targets" src="https://github.com/user-attachments/assets/6dbffe60-1b09-4691-abff-b9f6fbbe8233" />
 

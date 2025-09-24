@@ -1,3 +1,5 @@
+version: '3.9'
+
 volumes:
   prometheus-data:
     driver: local
@@ -5,7 +7,6 @@ volumes:
     driver: local
 
 services:
-  # Collects and stores metrics
   prometheus:
     image: prom/prometheus:v2.44.0
     container_name: prometheus
@@ -13,12 +14,9 @@ services:
       - "9090:9090"
     volumes:
       - prometheus-data:/prometheus
-      - ./prometheus.yaml:/etc/prometheus/prometheus.yaml:ro
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
     restart: unless-stopped
-    command:
-      - --config.file=/etc/prometheus/prometheus.yaml
 
-  # Visualizes metrics dashboards
   grafana:
     image: grafana/grafana-oss:12.1.1
     container_name: grafana
@@ -28,26 +26,9 @@ services:
       - grafana-data:/var/lib/grafana
     restart: unless-stopped
 
-  # Exposes system metrics for Prometheus
-  node_exporter:
-    image: quay.io/prometheus/node-exporter:latest
-    container_name: node_exporter
-    command:
-      - '--path.rootfs=/host'
-    pid: host
+  blackbox_exporter:
+    image: prom/blackbox-exporter:latest
+    container_name: blackbox_exporter
+    ports:
+      - "9115:9115"
     restart: unless-stopped
-    volumes:
-      - '/:/host:ro,rslave'
-
-  # Monitors Docker containers
-  cadvisor:
-    image: gcr.io/cadvisor/cadvisor:latest
-    container_name: cadvisor
-    volumes:
-      - /:/rootfs:ro
-      - /var/run:/var/run:ro
-      - /sys:/sys:ro
-      - /var/lib/docker/:/var/lib/docker:ro
-      - /dev/disk/:/dev/disk:ro
-    devices:
-      - /dev/kmsg

@@ -9,4 +9,4 @@
 <img width="800" height="600" alt="Grafana Blackbox Exporter" src="https://github.com/user-attachments/assets/bea16e56-a0a3-4e87-bec0-4202d4cb739b" />
 
 **Dashboard visualization**
-<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/cbb1911c-e5c2-4ede-826d-1d1f5429f83a" />
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/1adf5939-37c8-4ed6-9f6f-3dea6dbc59d9" />

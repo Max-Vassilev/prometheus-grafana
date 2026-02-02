@@ -8,14 +8,14 @@ This repository is used to monitor a frontend website hosted on an AWS S3 bucket
 
 This stack ensures end-to-end monitoring of the S3-hosted site.
 
-# Gallery:
+## Gallery:
 
-## Prometheus
+# Prometheus
 
 **Targets**
 <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/669608f9-f13c-4c00-a9b9-e31946e43a75" />
 
-## Grafana
+# Grafana
 
 **Creating a custom dashboard for Blackbox Exporter**  
 <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/347e2afd-a7f3-443f-b5df-e104aec5d48b" />

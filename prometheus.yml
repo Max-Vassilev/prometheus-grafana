@@ -7,7 +7,7 @@ scrape_configs:
     params:
       module: [http_2xx]
     static_configs:
-      - targets: ['http://54.89.185.135:8080/destinations'] # EC2 instance at IPv4 54.89.185.135
+      - targets: ['https://react-project-bucket-1.s3.us-east-1.amazonaws.com/index.html'] 
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target

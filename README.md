@@ -1,7 +1,7 @@
 ## Prometheus
 
 **Targets**
-<img width="800" height="600" alt="Prometheus Targets" src="https://github.com/user-attachments/assets/6dbffe60-1b09-4691-abff-b9f6fbbe8233" />
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/669608f9-f13c-4c00-a9b9-e31946e43a75" />
 
 ## Grafana
 

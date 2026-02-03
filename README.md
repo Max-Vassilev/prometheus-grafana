@@ -3,8 +3,8 @@
 This repository is used to monitor a frontend website hosted on an AWS S3 bucket.
 
 - **Prometheus**: Used to scrape and store metrics, including uptime and response time.
-- **Grafana**: Visualizes the metrics with dashboards, showing status and latency.
 - **Blackbox Exporter**: Probes the website endpoints, feeding uptime and latency metrics into Prometheus.
+- **Grafana**: Visualizes the metrics with dashboards, showing status and latency.
 
 This stack ensures end-to-end monitoring of the S3-hosted site.
 
